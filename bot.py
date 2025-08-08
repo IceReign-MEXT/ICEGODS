@@ -1,41 +1,22 @@
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import os
+from dotenv import load_dotenv
+import telebot
 
-# Your bot token
-TOKEN = "8271637966:AAG7w3unmqXvGC8hPOdm7cTZpLIduNEyaJY"
+# Load environment variables from .env file
+load_dotenv()
 
-# Your wallet addresses (example)
-RECEIVE_WALLET_SOL = "3rMsqvERQAEaGrkqt5wJFrg2715BDcXJMRf6bnBFGzP9"
-RECEIVE_WALLET_ETH = "0xba43fd4a3a4c1cd93a2e6379411267e1159bbc10"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+WALLET_ADDRESS = os.getenv("WALLET_ADDRESS")
 
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "👋 Welcome to ICEGODS Bot!\n\n"
-        "Use /wallet to get the wallet address.\n"
-        "Use /help to see other commands."
-    )
+bot = telebot.TeleBot(BOT_TOKEN)
 
-async def wallet(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        f"💰 Send your payment to:\n\n"
-        f"🔹 Solana: `{RECEIVE_WALLET_SOL}`\n"
-        f"🔸 Ethereum: `{RECEIVE_WALLET_ETH}`",
-        parse_mode="Markdown"
-    )
+@bot.message_handler(commands=["start"])
+def send_welcome(message):
+    bot.reply_to(message, "👋 Welcome to ICEGODS Bot!\nUse /pay to get the payment wallet.")
 
-async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
-        "/start - Welcome message\n"
-        "/wallet - Show payment wallet addresses\n"
-        "/help - List commands"
-    )
+@bot.message_handler(commands=["pay"])
+def send_wallet(message):
+    bot.reply_to(message, f"💰 Send payment to this wallet address:\n`{WALLET_ADDRESS}`", parse_mode="Markdown")
 
-if __name__ == '__main__':
-    app = ApplicationBuilder().token(TOKEN).build()
-
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("wallet", wallet))
-    app.add_handler(CommandHandler("help", help_command))
-
-    print("🚀 ICEGODS Bot is now running...")
-    app.run_polling()
+print("ICEGODS Bot Running!")
+bot.polling()
