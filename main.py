@@ -1,35 +1,26 @@
-import telebot
 import os
 from dotenv import load_dotenv
+import telebot
 
-# Load token from .env
+# Load environment variables from .env
 load_dotenv()
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+WALLET_ADDRESS = os.getenv("WALLET_ADDRESS")
+
+if not BOT_TOKEN or not WALLET_ADDRESS:
+    print("❌ BOT_TOKEN or WALLET_ADDRESS not loaded. Check your .env file.")
+    exit()
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
-# Replace with your real wallet addresses
-sol_wallet = "3rMsqvERQAEaGrkqt5wJFrg2715BDcXJMRf6bnBFGzP9"
-eth_wallet = "0xba43fd4a3a4c1cd93a2e6379411267e1159bbc10"
-
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
-    bot.reply_to(message, f"👋 Welcome to ICEGODS, {message.from_user.first_name}!\n\nSend /pay to get payment instructions.")
+    bot.send_message(message.chat.id, "👋 Welcome to ICEGODS Bot!\nUse /pay to get the payment wallet.")
 
 @bot.message_handler(commands=['pay'])
-def send_payment_info(message):
-    reply = (
-        "💸 Send your payment to one of the addresses below:\n\n"
-        f"🔵 *Solana*: `{sol_wallet}`\n"
-        f"🟠 *Ethereum*: `{eth_wallet}`\n\n"
-        "After sending, reply here with your transaction hash."
-    )
-    bot.send_message(message.chat.id, reply, parse_mode="Markdown")
+def send_wallet(message):
+    bot.send_message(message.chat.id, f"💰 Send payment to this wallet:\n`{WALLET_ADDRESS}`", parse_mode="Markdown")
 
-# Optional: Handle text messages (e.g., user sends transaction hash)
-@bot.message_handler(func=lambda m: True)
-def handle_message(message):
-    bot.reply_to(message, "✅ Thanks! We'll verify your payment soon.")
-
-print("ICEGODS Bot Running!")
+print("✅ ICEGODS Bot Running!")
 bot.infinity_polling()
