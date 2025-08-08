@@ -1,33 +1,33 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-import os
 
+# Your bot token
 TOKEN = "8271637966:AAG7w3unmqXvGC8hPOdm7cTZpLIduNEyaJY"
 
-# Replace with your payment address or use it later in a command
+# Your wallet addresses (example)
 RECEIVE_WALLET_SOL = "3rMsqvERQAEaGrkqt5wJFrg2715BDcXJMRf6bnBFGzP9"
 RECEIVE_WALLET_ETH = "0xba43fd4a3a4c1cd93a2e6379411267e1159bbc10"
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
         "👋 Welcome to ICEGODS Bot!\n\n"
-        "Send /wallet to get the payment wallet address.\n"
-        "Send /help to see what I can do."
+        "Use /wallet to get the wallet address.\n"
+        "Use /help to see other commands."
     )
 
 async def wallet(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        f"💸 Send your payments here:\n\n"
-        f"• Solana: `{RECEIVE_WALLET_SOL}`\n"
-        f"• Ethereum: `{RECEIVE_WALLET_ETH}`",
+        f"💰 Send your payment to:\n\n"
+        f"🔹 Solana: `{RECEIVE_WALLET_SOL}`\n"
+        f"🔸 Ethereum: `{RECEIVE_WALLET_ETH}`",
         parse_mode="Markdown"
     )
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "/start - Greet user\n"
-        "/wallet - Show payment wallets\n"
-        "/help - Show this message"
+        "/start - Welcome message\n"
+        "/wallet - Show payment wallet addresses\n"
+        "/help - List commands"
     )
 
 if __name__ == '__main__':
@@ -37,5 +37,5 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("wallet", wallet))
     app.add_handler(CommandHandler("help", help_command))
 
-    print("🚀 ICEGODS Bot is now running on Telegram...")
+    print("🚀 ICEGODS Bot is now running...")
     app.run_polling()
