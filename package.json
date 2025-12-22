@@ -1,0 +1,12 @@
+{
+  "name": "icegods-web",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve -s . -l 3000"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "express-fileupload": "^1.5.2",
+    "serve": "^14.2.5"
+  }
+}
