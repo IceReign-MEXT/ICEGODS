@@ -5,3 +5,5 @@ core/.env
 dist/
 user_bots/
 *.log
+.vercel
+.env*.local
