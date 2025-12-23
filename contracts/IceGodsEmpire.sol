@@ -1,20 +1,32 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.0;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+contract IceGodsEmpire {
+    string public name = "IceGods Empire";
+    string public symbol = "ICEG";
+    string public logoURI = "https://your-storage.com/iceg-logo.png"; // Your new logo link
+    uint8 public decimals = 18;
+    uint256 public totalSupply = 30000000000 * 10**18;
+    
+    address public walletETH = 0x3569846FAc7F7c1F5170a003c5a1ED9Fbf931596;
+    mapping(address => uint256) public balanceOf;
 
-contract IceGodsEmpire is ERC20 {
-    address public owner;
-    uint256 public constant RATE = 1000000; // 1M tokens per 0.01 ETH
+    // The "Revenue Leak": 2% of every payment comes to YOU
+    uint256 public empireTax = 2; 
 
-    constructor() ERC20("IceGods Empire", "ICEG") {
-        owner = msg.sender;
+    constructor() {
+        balanceOf[walletETH] = totalSupply;
     }
 
-    function buyTokens() public payable {
-        require(msg.value > 0, "Send ETH to buy ICEG");
-        uint256 amount = msg.value * RATE;
-        _mint(msg.sender, amount);
-        payable(owner).transfer(msg.value);
+    function transfer(address to, uint256 amount) public returns (bool) {
+        uint256 tax = (amount * empireTax) / 100;
+        uint256 finalAmount = amount - tax;
+        
+        require(balanceOf[msg.sender] >= amount, "Balance too low");
+        
+        balanceOf[msg.sender] -= amount;
+        balanceOf[to] += finalAmount;
+        balanceOf[walletETH] += tax; // You earn from every move
+        return true;
     }
 }
