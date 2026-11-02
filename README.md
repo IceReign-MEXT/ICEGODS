@@ -1,53 +1,48 @@
 # ICEGODS — Python & Web3 Developer
 
-**Python automation • Telegram bots • Blockchain monitoring • Solana tooling**
+**Python automation • Telegram bots • Blockchain data tooling • Solana**
 
-I build practical automation and blockchain-support tools, with a focus on Telegram bots, wallet-monitoring workflows, backend integrations, and developer utilities.
+I build practical software tools and automation, with a focus on Telegram bots, backend integrations, public blockchain data, and developer utilities.
 
-Based in Nigeria and open to **remote contract work, freelance projects, bug-fix tasks, and junior/associate opportunities**.
+I work under **ICE REIGN SYSTEMS**, an independent software company that develops its own digital products and delivers software solutions for clients.
 
 ## What I work on
 
 - **Python automation:** scripts, integrations, scheduled tasks, and workflow tools.
 - **Telegram bots:** command handlers, onboarding flows, alerts, and community utilities.
 - **Web3 tooling:** public-wallet monitoring concepts, blockchain data integrations, and transaction-alert workflows.
-- **Backend development:** API foundations, service integrations, and debugging.
-- **Solana ecosystem:** practical tools around public on-chain data and wallet activity.
+- **Backend development:** API integrations, service connections, debugging, and small application features.
+- **Solana ecosystem:** tools built around public on-chain data and wallet activity.
 
 ## Selected projects
 
 | Project | Focus | Status |
 |---|---|---|
-| [ICEGODS](https://github.com/IceReign-MEXT/ICEGODS) | Blockchain wallet-monitoring and Telegram tooling | In development; check the repository for current features |
-| [MEX-WarSystem](https://github.com/IceReign-MEXT/MEX-WarSystem) | Automation and bot project | Public source; review current implementation |
-| [IceReign-Machine](https://github.com/IceReign-MEXT/IceReign-Machine) | Python automation / machine project | Public source; review current implementation |
-| [marsquad-auto-bot](https://github.com/IceReign-MEXT/marsquad-auto-bot) | Telegram bot automation | Repository access may be restricted |
+| [ICEGODS](https://github.com/IceReign-MEXT/ICEGODS) | Python, Web3 and developer tooling | In development; check repository for current features |
+| [MEX-WarSystem](https://github.com/IceReign-MEXT/MEX-WarSystem) | Automation and bot project | Review repository for current implementation |
+| [IceReign-Machine](https://github.com/IceReign-MEXT/IceReign-Machine) | Python automation / machine project | Review repository for current implementation |
+| [MEXT Wallet Dashboard](https://github.com/IceReign-MEXT/mext-wallet-dashboard) | Wallet dashboard project | Review repository for current implementation |
 
-I describe projects according to their actual implementation. Some are prototypes or works in progress, not production security products.
+Some projects are prototypes or works in progress, not production security products.
 
-## Tools and technologies
+## Available for client work
 
-Python · JavaScript · Node.js · Express · Telegram Bot APIs · Git · REST APIs · Solana ecosystem
+- Telegram bot setup, fixes, and feature development
+- Python scripts and workflow automation
+- API integrations and backend debugging
+- Blockchain data and wallet-monitoring prototypes
+- Testing and technical documentation
 
-## Available for work
+For an enquiry, please include the task, expected deliverable, deadline, and budget.
 
-I can help with:
-- Telegram bot setup, fixes, and small feature additions
-- Python scripts and automation
-- API integration and backend debugging
-- Basic blockchain data and wallet-monitoring prototypes
-- Testing and documenting Web3 applications
+## Official links
 
-For project enquiries, please include the task, expected deliverable, deadline, and budget. I prefer clear milestones and written scope before starting.
-
-## Contact
-
+- **Company website:** https://icereign-mext.github.io/icegods-website/
 - **GitHub:** https://github.com/IceReign-MEXT
-- **Email:** MexRob@proton.me
-- **Project:** https://github.com/IceReign-MEXT/ICEGODS
-- **Website:** https://icegods-787j.vercel.app
+- **Telegram:** https://t.me/IceReignSystems
 - **X:** https://x.com/IceGodsSystems
+- **Email:** icegodsdevilgods@gmail.com
 
 ---
 
-*Building carefully. Testing honestly. Improving one release at a time.*
+*ICE REIGN SYSTEMS — Build. Protect. Connect.*
