@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ICEGODS — Python & Web3 Developer
 
-## Getting Started
+**Python automation • Telegram bots • Blockchain monitoring • Solana tooling**
 
-First, run the development server:
+I build practical automation and blockchain-support tools, with a focus on Telegram bots, wallet-monitoring workflows, backend integrations, and developer utilities.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Based in Nigeria and open to **remote contract work, freelance projects, bug-fix tasks, and junior/associate opportunities**.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What I work on
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Python automation:** scripts, integrations, scheduled tasks, and workflow tools.
+- **Telegram bots:** command handlers, onboarding flows, alerts, and community utilities.
+- **Web3 tooling:** public-wallet monitoring concepts, blockchain data integrations, and transaction-alert workflows.
+- **Backend development:** API foundations, service integrations, and debugging.
+- **Solana ecosystem:** practical tools around public on-chain data and wallet activity.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Selected projects
 
-## Learn More
+| Project | Focus | Status |
+|---|---|---|
+| [ICEGODS](https://github.com/IceReign-MEXT/ICEGODS) | Blockchain wallet-monitoring and Telegram tooling | In development; check the repository for current features |
+| [MEX-WarSystem](https://github.com/IceReign-MEXT/MEX-WarSystem) | Automation and bot project | Public source; review current implementation |
+| [IceReign-Machine](https://github.com/IceReign-MEXT/IceReign-Machine) | Python automation / machine project | Public source; review current implementation |
+| [marsquad-auto-bot](https://github.com/IceReign-MEXT/marsquad-auto-bot) | Telegram bot automation | Repository access may be restricted |
 
-To learn more about Next.js, take a look at the following resources:
+I describe projects according to their actual implementation. Some are prototypes or works in progress, not production security products.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tools and technologies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Python · JavaScript · Node.js · Express · Telegram Bot APIs · Git · REST APIs · Solana ecosystem
 
-## Deploy on Vercel
+## Available for work
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I can help with:
+- Telegram bot setup, fixes, and small feature additions
+- Python scripts and automation
+- API integration and backend debugging
+- Basic blockchain data and wallet-monitoring prototypes
+- Testing and documenting Web3 applications
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For project enquiries, please include the task, expected deliverable, deadline, and budget. I prefer clear milestones and written scope before starting.
+
+## Contact
+
+- **GitHub:** https://github.com/IceReign-MEXT
+- **Email:** MexRob@proton.me
+- **Project:** https://github.com/IceReign-MEXT/ICEGODS
+- **Website:** https://icegods-787j.vercel.app
+- **X:** https://x.com/IceGodsSystems
+
+---
+
+*Building carefully. Testing honestly. Improving one release at a time.*
